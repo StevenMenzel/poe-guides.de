@@ -1,15 +1,18 @@
-const express = require('express');
+import express from 'express';
+import {engine} from'express-handlebars';
 const server = express();
 //Middlewares
-///Example
-server.use((req,res,next)=>{
-
-});
+////Handlebars
+server.engine('handlebars', engine({
+  defaultlayout: 'main'
+}));
+server.set('view engine','handlebars');
+server.set('views', './views')
 //Routes
 /// Home
 server.get('/', (req , res)=>{
-
-  res.send('Home')
+  console.log('hier')
+  res.render('index')
 });
 
 
