@@ -1,6 +1,10 @@
 const express = require('express');
 const server = express();
+//Middlewares
+///Example
+server.use((req,res,next)=>{
 
+});
 //Routes
 /// Home
 server.get('/', (req , res)=>{
