@@ -11,7 +11,6 @@ server.set('views', './views')
 //Routes
 /// Home
 server.get('/', (req , res)=>{
-  console.log('hier')
   res.render('index')
 });
 
